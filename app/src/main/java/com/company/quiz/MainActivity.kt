@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.btnNext.setOnClickListener {
-            startActivity(Intent(this, PlayActivity::class.java))
+            startActivity(Intent(this, DashboardActivity::class.java))
         }
 
 

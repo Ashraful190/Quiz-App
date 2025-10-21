@@ -19,22 +19,34 @@ class PlayActivity : AppCompatActivity() {
         binding = ActivityPlayBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
+        // ✅ Get selected category from intent
+        val category = intent.getStringExtra("category") ?: ""
+
+        // ✅ Load questions into ViewModel
+        viewModel.loadQuestions(category)
+
+        // ✅ Check if there are any questions
+        if (LocalDataSource.questions.none { it.category == category }) {
+            Toast.makeText(this, "No questions found for $category", Toast.LENGTH_LONG).show()
+            finish()
+            return
+        }
+
         showCurrentQuestion()
 
         binding.btnNext.setOnClickListener {
+            val selectedIndex = binding.radioGroup.indexOfChild(
+                findViewById(binding.radioGroup.checkedRadioButtonId)
+            )
 
-            val selectedIndex = binding.radioGroup.indexOfChild(findViewById(binding.radioGroup.checkedRadioButtonId))
-
-            if (selectedIndex != -1){
+            if (selectedIndex != -1) {
                 viewModel.checkAnswer(selectedIndex)
                 setNextQuestion()
-            }else{
-                Toast.makeText(this, "Please select any option", Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(this, "Please select an option", Toast.LENGTH_SHORT).show()
             }
-
-            setNextQuestion()
-
-
         }
 
 
@@ -68,6 +80,7 @@ class PlayActivity : AppCompatActivity() {
             val resultIntent = Intent(this, ResultActivity::class.java)
             resultIntent.putExtra("score", viewModel.getScore())
             startActivity(resultIntent)
+            finish()
         }
 
     }
