@@ -14,12 +14,12 @@ class DashboardActivity : AppCompatActivity() {
         val gridView = findViewById<GridView>(R.id.gridViewCategories)
 
         val categories = listOf(
-            Category("Science", R.drawable.logo),
-            Category("Math", R.drawable.checked),
-            Category("History", R.drawable.logo),
-            Category("Geography", R.drawable.checked),
-            Category("Literature", R.drawable.checked),
-            Category("Sports", R.drawable.logo)
+            Category("Science", R.drawable.science),
+            Category("Math", R.drawable.math),
+            Category("History", R.drawable.history),
+            Category("Geography", R.drawable.geography),
+            Category("Literature", R.drawable.literature),
+            Category("Sports", R.drawable.sports)
         )
 
         val adapter = CategoryAdapter(this, categories)
