@@ -56,6 +56,31 @@ object LocalDataSource {
 
 
 
+        // -------------------- Literature --------------------
+        Quiz("Who wrote 'Hamlet'?", listOf("Charles Dickens", "William Shakespeare", "Leo Tolstoy", "Mark Twain"), 1, "Literature"),
+        Quiz("What is the national poem of Bangladesh?", listOf("Bidrohi", "Amar Sonar Bangla", "Sonar Tori", "Gitanjali"), 0, "Literature"),
+        Quiz("Who wrote 'Pather Panchali'?", listOf("Rabindranath Tagore", "Bibhutibhushan Bandyopadhyay", "Kazi Nazrul Islam", "Bankim Chandra Chattopadhyay"), 1, "Literature"),
+        Quiz("Who is known as the 'Bard of Avon'?", listOf("William Wordsworth", "William Shakespeare", "John Milton", "T.S. Eliot"), 1, "Literature"),
+        Quiz("Who wrote 'Gitanjali'?", listOf("Kazi Nazrul Islam", "Michael Madhusudan Dutt", "Rabindranath Tagore", "Sarat Chandra Chattopadhyay"), 2, "Literature"),
+        Quiz("Who is the author of 'Oliver Twist'?", listOf("William Shakespeare", "Charles Dickens", "Jane Austen", "George Orwell"), 1, "Literature"),
+        Quiz("What is the main theme of 'Paradise Lost'?", listOf("Love", "War", "Fall of Man", "Friendship"), 2, "Literature"),
+        Quiz("Who is known as the 'Rebel Poet' of Bengal?", listOf("Rabindranath Tagore", "Kazi Nazrul Islam", "Jasimuddin", "Michael Madhusudan Dutt"), 1, "Literature"),
+        Quiz("Who wrote 'Pride and Prejudice'?", listOf("Jane Austen", "Emily Brontë", "George Eliot", "Mary Shelley"), 0, "Literature"),
+        Quiz("Who wrote 'Macbeth'?", listOf("William Shakespeare", "John Keats", "Robert Frost", "Lord Byron"), 0, "Literature"),
+
+        // -------------------- Sports --------------------
+        Quiz("How many players are there in a football team?", listOf("9", "10", "11", "12"), 2, "Sports"),
+        Quiz("Which country won the FIFA World Cup 2022?", listOf("Brazil", "France", "Argentina", "Germany"), 2, "Sports"),
+        Quiz("In which sport is the term 'love' used?", listOf("Cricket", "Tennis", "Football", "Hockey"), 1, "Sports"),
+        Quiz("Who is known as the 'Fastest Man in the World'?", listOf("Usain Bolt", "Michael Phelps", "Cristiano Ronaldo", "Lionel Messi"), 0, "Sports"),
+        Quiz("What is the national sport of Bangladesh?", listOf("Kabaddi", "Cricket", "Football", "Hockey"), 0, "Sports"),
+        Quiz("How many rings are there in the Olympic logo?", listOf("4", "5", "6", "7"), 1, "Sports"),
+        Quiz("In cricket, how many runs are awarded for a boundary?", listOf("2", "4", "6", "8"), 1, "Sports"),
+        Quiz("Who won the ICC Cricket World Cup 2019?", listOf("India", "England", "Australia", "New Zealand"), 1, "Sports"),
+        Quiz("What sport uses a shuttlecock?", listOf("Tennis", "Badminton", "Table Tennis", "Squash"), 1, "Sports"),
+        Quiz("Which country hosts Wimbledon?", listOf("USA", "France", "England", "Australia"), 2, "Sports"),
+
+
 
         )
 }
